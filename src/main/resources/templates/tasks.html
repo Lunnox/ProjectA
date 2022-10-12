@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Project A (diary)</title>
+</head>
+<body>
+    <h1>Task List</h1>
+    <p><a th:href="@{/login}">Login</a></p>
+    <p><a th:href="@{/tasks}">Tasks</a></p>
+
+    <ul>
+        <li th:each="task : ${taskItems}">
+            <span th:text="${task}">title task</span></li>
+    </ul>
+</body>
+</html>
